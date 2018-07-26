@@ -39,5 +39,11 @@ def valid_phone_number?(phone)
     return true
   elsif phone.match(/^(\()(\d{3})(\))(\d{3})(\-)(\d{4}$)/)
     return true
+  elsif phone.match(/^(\d{3})(\s)(\d{3})(\s)(\d{4})$/)
+    return true
+  elsif phone.match(/^(\()(\d{3})(\))(\d{7})/)
+    return true
+
+
 
 end
