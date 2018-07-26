@@ -22,7 +22,14 @@ end
 def first_word_capitalized_and_ends_with_punctuation?(text)
   if text.match(/[A-Z]+\w/) && text.scan(/[!.?,;:"]$/)
     return true
-  end
+  elsif text.match(/[a-z]+\w/) && text.scan(/[!.?,;:"]$/)
+    return false
+  elsif text.match(/[A-Z]+\w/) && text.scan(/[^!.?,;:"]$/)
+    return false
+  elsif text.match(/[^A-Z]+\w/) && text.scan(/[^!.?,;:"]$/)
+
+
+
 end
 
 def valid_phone_number?(phone)
