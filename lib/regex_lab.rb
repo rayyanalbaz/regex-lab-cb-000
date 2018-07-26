@@ -24,9 +24,9 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
     return true
   elsif text.match(/^[a-z]/) && text.scan(/[!.?,;:"]$/) != []
     return false
-  elsif text.match(/^[A-Z]+\w/) && text.scan(/[^!.?,;:"]$/) != []
+  elsif text.match(/^[A-Z]/) && text.scan(/[^!.?,;:"]$/) != []
     return false
-  elsif text.match(/^[^A-Z]+\w/) && text.scan(/[^!.?,;:"]$/) != []
+  elsif text.match(/^[^A-Z]/) && text.scan(/[^!.?,;:"]$/) != []
     return false
   end
 
